@@ -41,8 +41,7 @@ jobs:
         source multibuild/travis_steps.sh
         before_install
     - name: multibuild - install
-        #clean_code $REPO_DIR $BUILD_COMMIT
-        #build_wheel $REPO_DIR $PLAT
-        clean_code
-        build_wheel
+      run: |
+        clean_code $REPO_DIR $BUILD_COMMIT
+        build_wheel $REPO_DIR $PLAT
         ls

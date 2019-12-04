@@ -31,11 +31,14 @@ jobs:
         cd ufunclab
         pwd
         pip install .
-    - name: Run multibuild scripts
+    - name: multibuild: before install
       run: |
         pwd
-        ls
         source multibuild/common_utils.sh
         # Not running on TravisCI, but try it anyway...
         source multibuild/travis_steps.sh
         before_install
+    - name: multibuild: install
+        clean_code $REPO_DIR $BUILD_COMMIT
+        build_wheel $REPO_DIR $PLAT
+        ls

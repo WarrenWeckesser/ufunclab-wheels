@@ -34,6 +34,9 @@ jobs:
 ##        pwd
 ##        pip install .
     - name: multibuild scripts
+      with:
+        REPO_DIR: ufunclab
+        BUILD_COMMIT: c1bba4c6997885d3f14b6869994d53b758322680
       run: |
         pwd
         source multibuild/common_utils.sh

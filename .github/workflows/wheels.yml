@@ -34,6 +34,7 @@ jobs:
     - name: Install ufunclab
       run: |
         cd ufunclab
+        pwd
         pip install .
     - name: Test with pytest
       run: |

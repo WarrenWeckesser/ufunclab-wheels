@@ -35,4 +35,5 @@ jobs:
       run: |
         cd
         pwd
+        ls
         source multibuild/common_utils.sh

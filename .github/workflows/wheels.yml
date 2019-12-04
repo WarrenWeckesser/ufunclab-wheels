@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip wheel virtualenv
-        pip install numpy==${{ matrix.numpy-version }}
+##    - name: Install dependencies
+##      run: |
+##        python -m pip install --upgrade pip wheel virtualenv
+##        pip install numpy==${{ matrix.numpy-version }}
     - name: Initialize git submodules
       run: |
         git submodule init
@@ -37,6 +37,7 @@ jobs:
       env:
         REPO_DIR: ufunclab
         BUILD_COMMIT: c1bba4c6997885d3f14b6869994d53b758322680
+        BUILD_DEPENDS: numpy
         MB_PYTHON_VERSION: ${{ matrix.python-version }}
       run: |
         pwd

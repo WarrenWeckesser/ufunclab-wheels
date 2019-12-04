@@ -24,13 +24,15 @@ jobs:
       run: |
         python -m pip install --upgrade pip wheel virtualenv
         pip install numpy==${{ matrix.numpy-version }}
-    - name: Install ufunclab
+    - name: Initialize git submodules
       run: |
         git submodule init
         git submodule update
-        cd ufunclab
-        pwd
-        pip install .
+##    - name: Install ufunclab
+##      run: |
+##        cd ufunclab
+##        pwd
+##        pip install .
     - name: multibuild: before install
       run: |
         pwd
@@ -39,6 +41,8 @@ jobs:
         source multibuild/travis_steps.sh
         before_install
     - name: multibuild: install
-        clean_code $REPO_DIR $BUILD_COMMIT
-        build_wheel $REPO_DIR $PLAT
+        #clean_code $REPO_DIR $BUILD_COMMIT
+        #build_wheel $REPO_DIR $PLAT
+        clean_code
+        build_wheel
         ls

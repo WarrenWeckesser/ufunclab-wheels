@@ -34,4 +34,5 @@ jobs:
     - name: Run multibuild scripts
       run: |
         cd
+        pwd
         source multibuild/common_utils.sh

@@ -1,0 +1,6 @@
+[submodule "multibuild"]
+	path = multibuild
+	url = https://github.com/matthew-brett/multibuild.git
+[submodule "ufunclab"]
+	path = ufunclab
+	url = https://github.com/WarrenWeckesser/ufunclab.git

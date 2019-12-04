@@ -36,3 +36,6 @@ jobs:
         pwd
         ls
         source multibuild/common_utils.sh
+        # Not running on TravisCI, but try it anyway...
+        source multibuild/travis_steps.sh
+        before_install
